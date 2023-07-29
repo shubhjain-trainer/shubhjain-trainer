@@ -1,0 +1,25 @@
+clear # clear command will clear up the cloud shell display and bring the command prompt to the top of the terminal window
+
+az group list # Azure CLI command that allows us to list out resource groups
+
+Get-AzResourceGroup # PowerShell cmdlet that allows us to get information about resource groups
+
+$rg = Get-AzResourceGroup # Output our resource groups by name as tab separated values and assign it to a variable
+
+$rg # call the variable to return information stored in the variable
+
+# Create VM and configuration details for deployment
+az vm create `
+--resource-group $rgs.ResourceGroupName `
+--location $rg.Location `
+--name vm-demo-001 `
+--image UbuntuLTS `
+--admin-username cloudchase `
+--generate-ssh-keys `
+--no-wait
+
+Get-AzResource | Format-Table # Get all Azure resources in table format
+
+
+# Uncomment the below line to download the script for cleaning up the Azure cloud sandbox. Please be advised that this script is destructive.
+# Invoke-WebRequest -Uri "https://raw.githubusercontent.com/BrentenDovey-ACG/AZ-104_Azure_Administrator/master/cleanerScript.ps1" -OutFile ~/cleanerScript.ps1
