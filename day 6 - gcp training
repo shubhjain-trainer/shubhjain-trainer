@@ -1,0 +1,12 @@
+Key take aways 
+  vm changes can be applied in three ways 
+
+1. refresh ( no reset or restart is required  
+- networktags , allow http firewall etc, disk more disk size , add secondary disk , 
+
+2. reset .  
+metadata ( apply metadata ) 
+
+3. restart/ shutdown state 
+changing default service account
+changing NIC 
